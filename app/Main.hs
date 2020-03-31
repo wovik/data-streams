@@ -11,13 +11,13 @@ makeSimulation handle k n ns l =
             hPutStrLn handle $ show n ++ "\t" ++ show (ratio (minCount k xs) n)
             makeSimulation handle k (n+1) ys l
 
-writeToFile k = do 
-    handle <- openFile ("data/" ++ show k ++ ".dat") WriteMode 
+writeToFile k = do
+    handle <- openFile ("data/" ++ show k ++ ".dat") WriteMode
     makeSimulation handle k 1 [1..] 10001
     hClose handle
 
 main :: IO ()
-main = do     
+main = do
     writeToFile 2
     writeToFile 3
     writeToFile 10
