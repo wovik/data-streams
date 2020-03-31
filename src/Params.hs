@@ -1,13 +1,13 @@
 module Params
-    ( bytes,
+    ( bits,
       hashFunc,
       size
     ) where
 
 import qualified Crypto.Hash as H
 
-size = 2^(bytes*8)+1
+size = 2^bits+1
 
 
-bytes = 8
+bits = 64 :: Int
 hashFunc n = H.hash n :: H.Digest H.SHA3_256

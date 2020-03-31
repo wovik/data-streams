@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 90baafe613935efcf02d2410ac2bbabb562c66560eb55d1fe8d1524ad68ceee1
+-- hash: de888c9903edf67fe6e100c18482b58b676b1315a7a541bc7bbfe331b38bf09f
 
 name:           data-streams
 version:        0.1.0.0
@@ -27,8 +27,10 @@ source-repository head
 
 library
   exposed-modules:
+      HyperLogLog
       MinCount
       Params
+      Utils
   other-modules:
       Paths_data_streams
   hs-source-dirs:

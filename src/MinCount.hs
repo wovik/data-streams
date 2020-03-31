@@ -3,35 +3,23 @@ module MinCount
       ratio
     ) where
 
-import Crypto.Hash
-import Data.ByteString.Char8
-import Crypto.Number.Serialize.LE
 import Params
 import Data.MultiSet (MultiSet)
 import qualified Data.MultiSet as MultiSet
 import Data.Ratio
-
-toByteString :: Integer -> ByteString
-toByteString = pack . show
-
-hashNumber :: Integer -> Integer
-hashNumber = hexHash . toByteString 
-
-hexHash :: ByteString -> Integer
-hexHash n = (`mod` size) $ os2ip $ hashFunc n 
+import Utils
 
 getEstimation :: Int -> MultiSet Integer -> Double
 getEstimation k set = fromRational $ (s*k1) % h
-    where 
+    where
         h = MultiSet.findMax set
         s = size
         k1 = fromIntegral (k-1)
 
 ratio :: Double -> Int -> Double
 ratio n n1 = n / fromIntegral n1
-       
 
-minCount :: Int -> [Integer] -> Double 
+minCount :: Int -> [Integer] -> Double
 minCount k ns = case defs of 0 -> getEstimation k set
                              _ -> fromIntegral (k-defs)
     where set = minCountImpl ns $ MultiSet.insertMany size k MultiSet.empty
