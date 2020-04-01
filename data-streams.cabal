@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: de888c9903edf67fe6e100c18482b58b676b1315a7a541bc7bbfe331b38bf09f
+-- hash: 1ceab10ec02862d08bc2df831891788cf55b6c45a53cb8e02cf942098d2c1f66
 
 name:           data-streams
 version:        0.1.0.0
@@ -38,6 +38,7 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , containers
     , cryptonite
     , memory
     , multiset
@@ -53,6 +54,7 @@ executable data-streams-exe
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , containers
     , cryptonite
     , data-streams
     , memory
@@ -70,6 +72,7 @@ test-suite data-streams-test
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , containers
     , cryptonite
     , data-streams
     , hspec
