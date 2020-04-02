@@ -28,8 +28,12 @@ writeToFile k = do
 
 main :: IO ()
 main = do
-    writeToFile 2
-    writeToFile 3
+    -- writeToFile 2
+    -- writeToFile 3
+    -- writeToFile 10
+    -- writeToFile 100
+    -- writeToFile 400
+    writeToFile 5
     writeToFile 10
-    writeToFile 100
-    writeToFile 400
+    writeToFile 20
+    writeToFile 40
