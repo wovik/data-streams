@@ -12,7 +12,7 @@ set zrange [ * : * ] noreverse writeback
 set cbrange [ * : * ] noreverse writeback
 set rrange [ * : * ] noreverse writeback
 NO_ANIMATION = 1
-plot [1:10000] '2.dat'
+plot [1:10000] '2.dat', 1
 
 set output '3.png'
 set key bmargin left horizontal Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid
@@ -27,7 +27,7 @@ set zrange [ * : * ] noreverse writeback
 set cbrange [ * : * ] noreverse writeback
 set rrange [ * : * ] noreverse writeback
 NO_ANIMATION = 1
-plot [1:10000] '3.dat'
+plot [1:10000] '3.dat', 1
 
 set output '10.png'
 set key bmargin left horizontal Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid
@@ -42,7 +42,7 @@ set zrange [ * : * ] noreverse writeback
 set cbrange [ * : * ] noreverse writeback
 set rrange [ * : * ] noreverse writeback
 NO_ANIMATION = 1
-plot [1:10000] '10.dat'
+plot [1:10000] '10.dat', 1
 
 set output '100.png'
 set key bmargin left horizontal Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid
@@ -57,7 +57,7 @@ set zrange [ * : * ] noreverse writeback
 set cbrange [ * : * ] noreverse writeback
 set rrange [ * : * ] noreverse writeback
 NO_ANIMATION = 1
-plot [1:10000] '100.dat'
+plot [1:10000] '100.dat', 1
 
 set output '400.png'
 set key bmargin left horizontal Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid
@@ -72,4 +72,4 @@ set zrange [ * : * ] noreverse writeback
 set cbrange [ * : * ] noreverse writeback
 set rrange [ * : * ] noreverse writeback
 NO_ANIMATION = 1
-plot [1:10000] '400.dat'
+plot [1:10000] '400.dat', 1
