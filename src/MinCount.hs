@@ -30,4 +30,4 @@ minCountImpl [] set = set
 minCountImpl (n:ns) set = minCountImpl ns updatedSet
     where
         h = hashNumber n
-        updatedSet = MultiSet.deleteMax $ MultiSet.insert h set
+        updatedSet = if MultiSet.member h set then set else (MultiSet.deleteMax $ MultiSet.insert h set)
