@@ -26,6 +26,7 @@ dependencies:
 - bytestring
 - multiset
 - containers
+- random
 
 library:
   source-dirs: src

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1ceab10ec02862d08bc2df831891788cf55b6c45a53cb8e02cf942098d2c1f66
+-- hash: f0c628678ace45954d1caaa77b27e0bcbf6b2b7d6fe8c6e8e493d74818da65af
 
 name:           data-streams
 version:        0.1.0.0
@@ -30,6 +30,7 @@ library
       HyperLogLog
       MinCount
       Params
+      UniqueSum
       Utils
   other-modules:
       Paths_data_streams
@@ -42,6 +43,7 @@ library
     , cryptonite
     , memory
     , multiset
+    , random
   default-language: Haskell2010
 
 executable data-streams-exe
@@ -59,6 +61,7 @@ executable data-streams-exe
     , data-streams
     , memory
     , multiset
+    , random
   default-language: Haskell2010
 
 test-suite data-streams-test
@@ -78,4 +81,5 @@ test-suite data-streams-test
     , hspec
     , memory
     , multiset
+    , random
   default-language: Haskell2010

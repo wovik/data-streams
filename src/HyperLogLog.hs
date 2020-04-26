@@ -1,7 +1,6 @@
 module HyperLogLog
     (
-        hyperLogLog,
-        firstOne
+        hyperLogLog
     ) where
 
 import Utils (hashNumber)
