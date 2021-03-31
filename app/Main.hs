@@ -42,13 +42,18 @@ writeSuccesses k alpha =
 --     writeToFile 7
 --     writeToFile 8
 
--- main :: IO ()
--- main = do
-    -- writeToFile 2
-    -- writeToFile 3
-    -- writeToFile 10
-    -- writeToFile 100
-    -- writeToFile 400
+dropOther [] = []
+dropOther (x:y:xs) = y:dropOther xs
+
+main :: IO ()
+main = do
+    cont <- readFile "data/MinCount_SHA3_256_64bits/400.dat"
+    let readDouble = read :: String -> Double
+    let results = sort $ map abs $ map (1-) $map readDouble $ dropOther $ words cont
+    print $ length results
+    print $ results !! 9950
+    print $ results !! 9900
+    print $ results !! 9500
 
 -- alpha = 0.1
 
@@ -95,9 +100,9 @@ writeToFileSum m = do
     makeSimulationAvg handle m 1 (zip [1..] onesAndBigNum) 1001
     hClose handle
 
-main = do
-    writeToFileSum 3
-    writeToFileSum 10
-    writeToFileSum 100
-    writeToFileSum 400
+-- main = do
+--     writeToFileSum 3
+--     writeToFileSum 10
+--     writeToFileSum 100
+--     writeToFileSum 400
 

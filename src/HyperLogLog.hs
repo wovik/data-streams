@@ -19,8 +19,8 @@ firstOne n = case find (testBit n) [0..bits] of Nothing -> bits+1
 
 takeBits :: Integer -> Int -> Int
 takeBits n 0 = zeroBits
-takeBits n b = case testBit n (b-1) of True -> bit (b-1) .|. takeBits n (b-1)
-                                       False -> zeroBits  .|. takeBits n (b-1)
+takeBits n b = if testBit n (b-1) then  bit (b-1) .|. takeBits n (b-1)
+                                  else zeroBits  .|. takeBits n (b-1)
 
 dropBits :: Integer -> Int -> Integer
 dropBits = shiftR
